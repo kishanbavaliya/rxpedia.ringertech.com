@@ -230,7 +230,7 @@ class StoreFrontController extends Controller
      */
     public function shop(Request $request)
     {
-        if (!Auth::check()) {
+        if (!Auth::guard('store')->check()) {
             return redirect()->route('store.login.show');
         }
         $s = StoreSetting::firstOrFail();

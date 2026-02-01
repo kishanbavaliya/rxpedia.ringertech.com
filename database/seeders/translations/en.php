@@ -842,7 +842,7 @@ return [
 'Customer_Credit_Note' => 'Customer Credit Note',
 'Sell_Return' => 'Sell Return',
 'Purchase_Return' => 'Purchase Return',
-'Tax_Number' => 'Tax Number',
+'Tax_Number' => 'GST Number',
 'Please_add_return_quantity' => 'Please add return quantity',
 'Return_exist_for_the_Transaction' => 'Return exist for the Transaction',
 'qty_return_is_greater_than_Quantity_Remaining' => 'Qty return is greater than Quantity Remaining',
@@ -1955,6 +1955,7 @@ return [
 'Date_Format' => 'Date Format',
 'Price_Format' => 'Price Format',
 'How_many_items_do_you_want_to_display_in_POS' => 'How many items do you want to display in POS',
-
+'Drug_License_Number' => 'Drug License Number',
+'FSSAI_License_Number' => 'FSSAI License Number',
 
 ];

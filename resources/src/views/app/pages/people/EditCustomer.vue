@@ -81,13 +81,35 @@
                 </b-form-group>
             </b-col>
 
-             <!-- Customer Tax Number -->
+             <!-- Customer GST Number -->
             <b-col md="6" sm="12">
                 <b-form-group :label="$t('Tax_Number')">
                   <b-form-input
-                    label="Tax Number"
+                    label="GST Number"
                     v-model="client.tax_number"
                     :placeholder="$t('Tax_Number')"
+                  ></b-form-input>
+                </b-form-group>
+            </b-col>
+
+            <!-- Drug License Number -->
+            <b-col md="6" sm="12">
+                <b-form-group :label="$t('Drug_License_Number')">
+                  <b-form-input
+                    label="Drug License Number"
+                    v-model="client.drug_license_number"
+                    :placeholder="$t('Drug_License_Number')"
+                  ></b-form-input>
+                </b-form-group>
+            </b-col>
+
+            <!-- FSSAI License Number -->
+            <b-col md="6" sm="12">
+                <b-form-group :label="$t('FSSAI_License_Number')">
+                  <b-form-input
+                    label="FSSAI License Number"
+                    v-model="client.fssai_license_number"
+                    :placeholder="$t('FSSAI_License_Number')"
                   ></b-form-input>
                 </b-form-group>
             </b-col>
@@ -175,6 +197,8 @@ export default {
         phone: "",
         country: "",
         tax_number: "",
+            drug_license_number: "",
+            fssai_license_number: "",
         city: "",
         adresse: "",
         is_royalty_eligible: "",
@@ -208,6 +232,8 @@ export default {
           email: this.client.email,
           phone: this.client.phone,
           tax_number: this.client.tax_number,
+          drug_license_number: this.client.drug_license_number,
+          fssai_license_number: this.client.fssai_license_number,
           country: this.client.country,
           city: this.client.city,
           adresse: this.client.adresse,

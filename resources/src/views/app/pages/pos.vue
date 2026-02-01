@@ -1439,11 +1439,11 @@
             </b-form-group>
           </b-col>
 
-          <!-- Customer Tax Number -->
+          <!-- Customer GST Number -->
           <b-col md="6" sm="12">
             <b-form-group :label="$t('Tax_Number')">
               <b-form-input
-                label="Tax Number"
+                label="GST Number"
                 v-model="client.tax_number"
                 :placeholder="$t('Tax_Number')"
               ></b-form-input>

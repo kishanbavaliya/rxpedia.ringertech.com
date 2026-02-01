@@ -177,4 +177,6 @@ return [
     'AlreadyHaveAccountQ' => 'Vous avez déjà un compte ?',
     'BackToShop' => 'Retour à la boutique',
     'ProfileUpdated' => 'Votre profil a été mis à jour avec succès.',
+    'Drug_License_Number' => 'Numéro de licence pharmaceutique',
+    'FSSAI_License_Number' => 'Numéro de licence FSSAI',
 ];

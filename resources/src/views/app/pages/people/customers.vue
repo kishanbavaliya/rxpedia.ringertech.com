@@ -645,7 +645,7 @@
                 <th>{{client.adresse}}</th>
               </tr>
               <tr>
-                <!-- Tax Number -->
+                <!-- GST Number -->
                 <td>{{$t('Tax_Number')}}</td>
                 <th>{{client.tax_number}}</th>
               </tr>
@@ -920,6 +920,8 @@ export default {
         city: "",
         adresse: "",
         tax_number: "",
+        drug_license_number: "",
+        fssai_license_number: "",
         is_royalty_eligible: "",
 
       },
@@ -1517,6 +1519,8 @@ export default {
           email: this.client.email,
           phone: this.client.phone,
           tax_number: this.client.tax_number,
+          drug_license_number: this.client.drug_license_number,
+          fssai_license_number: this.client.fssai_license_number,
           country: this.client.country,
           city: this.client.city,
           adresse: this.client.adresse,
@@ -1548,6 +1552,8 @@ export default {
           email: this.client.email,
           phone: this.client.phone,
           tax_number: this.client.tax_number,
+          drug_license_number: this.client.drug_license_number,
+          fssai_license_number: this.client.fssai_license_number,
           country: this.client.country,
           city: this.client.city,
           adresse: this.client.adresse,

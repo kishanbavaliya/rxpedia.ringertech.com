@@ -177,4 +177,6 @@ return [
     'AlreadyHaveAccountQ' => 'Already have an account?',
     'BackToShop' => 'Back to shop',
     'ProfileUpdated' => 'Your profile was updated successfully.',
+    'Drug_License_Number' => 'Drug License Number',
+    'FSSAI_License_Number' => 'FSSAI License Number',
 ];

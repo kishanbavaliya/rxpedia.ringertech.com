@@ -124,6 +124,8 @@ class ClientController extends BaseController
             $item['country'] = $client->country;
             $item['city'] = $client->city;
             $item['adresse'] = $client->adresse;
+            $item['drug_license_number'] = $client->drug_license_number ?? null;
+            $item['fssai_license_number'] = $client->fssai_license_number ?? null;
             $item['is_royalty_eligible'] = $client->is_royalty_eligible;
             $item['points'] = $client->points;
             $item['opening_balance'] = $client->opening_balance ?? 0;
@@ -169,6 +171,12 @@ class ClientController extends BaseController
             ],
         ]);
 
+        // Optional license fields
+        $request->validate([
+            'drug_license_number' => ['nullable', 'string', 'max:100'],
+            'fssai_license_number' => ['nullable', 'string', 'max:100'],
+        ]);
+
         if ($request['is_royalty_eligible'] == '1' || $request['is_royalty_eligible'] == 'true') {
             $is_royalty_eligible = 1;
         } else {
@@ -187,6 +195,8 @@ class ClientController extends BaseController
             'is_royalty_eligible' => $is_royalty_eligible,
             'opening_balance' => $request['opening_balance'] ?? 0,
             'credit_limit' => $request['credit_limit'] ?? 0,
+            'drug_license_number' => $request['drug_license_number'] ?? null,
+            'fssai_license_number' => $request['fssai_license_number'] ?? null,
         ]);
 
         return response()->json($client);
@@ -231,6 +241,8 @@ class ClientController extends BaseController
             'country' => ['nullable', 'string', 'max:100'],
             'city' => ['nullable', 'string', 'max:100'],
             'tax_number' => ['nullable', 'string', 'max:100'],
+            'drug_license_number' => ['nullable', 'string', 'max:100'],
+            'fssai_license_number' => ['nullable', 'string', 'max:100'],
 
             // EcommerceClient-specific (optional)
             'username' => [
@@ -258,6 +270,8 @@ class ClientController extends BaseController
                 'country' => $request->input('country'),
                 'city' => $request->input('city'),
                 'tax_number' => $request->input('tax_number'),
+                'drug_license_number' => $request->input('drug_license_number'),
+                'fssai_license_number' => $request->input('fssai_license_number'),
                 'is_royalty_eligible' => $isRoyaltyEligible,
                 'credit_limit' => $request->input('credit_limit', 0),
             ]);
