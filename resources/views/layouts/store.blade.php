@@ -184,7 +184,7 @@
           @else
             {{-- Guest: Sign in / Register --}}
             <a class="btn btn-sm btn-outline-primary" href="{{ $loginUrl }}">{{ __('messages.SignIn') }}</a>
-            <a class="btn btn-sm btn-primary" href="{{ $registerUrl }}">{{ __('messages.CreateAccount') }}</a>
+            {{-- <a class="btn btn-sm btn-primary" href="{{ $registerUrl }}">{{ __('messages.CreateAccount') }}</a>--}}
           @endif
 
           {{-- Cart button (LocalStorage offcanvas) --}}

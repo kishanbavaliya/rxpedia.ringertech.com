@@ -88,10 +88,10 @@
             </button>
           </form>
 
-          <div class="text-center mt-3 small">
+          <!-- <div class="text-center mt-3 small">
             {{ __('messages.DontHaveAccountQ') }}
             <a href="{{ route('store.register.show', ['redirect' => $redirect]) }}">{{ __('messages.CreateOne') }}</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

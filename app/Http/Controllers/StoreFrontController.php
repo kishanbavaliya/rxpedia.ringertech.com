@@ -9,6 +9,7 @@ use App\Models\StoreBanner;
 use App\Models\StoreSetting;
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StoreFrontController extends Controller
 {
@@ -229,6 +230,9 @@ class StoreFrontController extends Controller
      */
     public function shop(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('store.login.show');
+        }
         $s = StoreSetting::firstOrFail();
 
         $q = trim((string) $request->get('q', ''));
